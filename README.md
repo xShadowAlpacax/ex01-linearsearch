@@ -4,7 +4,7 @@ The purpose of this assignment is for your to become familiar with C++ and the b
 
 The first thing you will need to do is fork and clone this assignment
 from GitHub. Follow the instructions 
-[here](https://github.com/vcc-csv15-fall2018/HowToStartEveryProject)
+[here](https://github.com/vcc-csv15-fall2018/Course-Information.wiki/HowToStartEveryProject.md)
 to get started. 
 
 Be sure that you fork the project first and use the URL from
@@ -98,22 +98,26 @@ like this:
 
 ```bash
 Running main() from gtest_main.cc
-[==========] Running 1 test from 1 test case.
+[==========] Running 3 tests from 1 test case.
 [----------] Global test environment set-up.
-[----------] 1 test from HelloWorldTest
-[ RUN      ] HelloWorldTest.Positive
-[       OK ] HelloWorldTest.Positive (2 ms)
+[----------] 3 tests from LinearSearchTest
+[ RUN      ] LinearSearchTest.FindInt10
+[       OK ] LinearSearchTest.FindInt10 (0 ms)
+[ RUN      ] LinearSearchTest.DontFindInt11
+[       OK ] LinearSearchTest.DontFindInt11 (0 ms)
+[ RUN      ] LinearSearchTest.PassNullString
+[       OK ] LinearSearchTest.PassNullString (0 ms)
 
 Your unit test score is 20 out of 20
 The assignment is worth a total of 25 where the remainder of 5 points
 comes from grading related to documentation, algorithms, and other
 criteria.
 
-[----------] 1 test from HelloWorldTest (2 ms total)
+[----------] 3 tests from LinearSearchTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test case ran. (2 ms total)
-[  PASSED  ] 1 test.
+[==========] 3 tests from 1 test case ran. (0 ms total)
+[  PASSED  ] 3 tests.
 
 Process finished with exit code 0
 ```
