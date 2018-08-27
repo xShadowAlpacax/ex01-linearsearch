@@ -4,7 +4,7 @@ The purpose of this assignment is for your to become familiar with C++ and the b
 
 The first thing you will need to do is fork and clone this assignment
 from GitHub. Follow the instructions 
-[here](https://github.com/vcc-csv15-fall2018/Course-Information.wiki/HowToStartEveryProject.md)
+[here](https://github.com/vcc-csv15-fall2018/Course-Information/wiki)
 to get started. 
 
 Be sure that you fork the project first and use the URL from
