@@ -27,9 +27,9 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-// A unit tester for EX01-HelloWorld in CS140 at Santa Barbara City College.
+// A unit tester for EX01-LinearSearch in CSV15 at Ventura College.
 //
-// Author: ahknight@pipeline.sbcc.edu (Allan Knight)
+// Author: aknight@vcccd.edu (Allan Knight)
 
 
 // Includes for google test and the unit under test.
@@ -43,68 +43,69 @@
 
 namespace {
 
-// Tests edu::sbcc:cs140::HelloWorld::greetWorld().
+	// Tests edu::sbcc:cs140::HelloWorld::greetWorld().
 
-using namespace ::testing_internal;
-using edu::vcccd::vc::csv15::find;
+	using namespace ::testing_internal;
+	using edu::vcccd::vc::csv15::find;
 
-class LinearSearchTest : public ::testing::Test {
-protected:
-    static const uint MAX_TESTED_SCORE = 20;
-    static const uint MAX_OVERALL_SCORE = 25;
-    static uint _testScore;
+	class LinearSearchTest : public ::testing::Test {
+	protected:
+		static const uint64_t MAX_TESTED_SCORE = 20;
+		static const uint64_t MAX_OVERALL_SCORE = 25;
+		static uint64_t _testScore;
 
-protected:
-    static void TearDownTestCase() {
-      if (_testScore == MAX_TESTED_SCORE) {
-        std::cout << std::endl << "Your unit test score is "
-                               << _testScore << " out of "
-                               << MAX_TESTED_SCORE << std::endl;
-      } else {
-        std::cout << "Your unit test score is "
-                  << _testScore << " out of "
-                  << MAX_TESTED_SCORE << " ("<< (int)(_testScore - MAX_TESTED_SCORE)
-                  << ")" << std::endl;
-      }
+	protected:
+		static void TearDownTestCase() {
+			if (_testScore == MAX_TESTED_SCORE) {
+				std::cout << std::endl << "Your unit test score is "
+					<< _testScore << " out of "
+					<< MAX_TESTED_SCORE << std::endl;
+			}
+			else {
+				std::cout << "Your unit test score is "
+					<< _testScore << " out of "
+					<< MAX_TESTED_SCORE << " (" << (int)(_testScore - MAX_TESTED_SCORE)
+					<< ")" << std::endl;
+			}
 
-      std::cout << "The assignment is worth a total of " << MAX_OVERALL_SCORE
-                << " where the remainder of 5 points" << std::endl;
-      std::cout << "comes from grading related to documentation, algorithms, and other"
-                << std::endl;
-      std::cout << "criteria." << std::endl << std::endl;
-    }
-};
+			std::cout << "The assignment is worth a total of " << MAX_OVERALL_SCORE
+				<< " where the remainder of 5 points" << std::endl;
+			std::cout << "comes from grading related to documentation, algorithms, and other"
+				<< std::endl;
+			std::cout << "criteria." << std::endl << std::endl;
+		}
+	};
 
-uint LinearSearchTest::_testScore = 0;
+	uint64_t LinearSearchTest::_testScore = 0;
 
-    // Tests returned string of greetWorld().
-    TEST_F(LinearSearchTest, FindInt10) {
-      // This test is named "Positive", and belongs to the "HelloWorld"
-      // test case.
+	// Tests returned string of greetWorld().
+	TEST_F(LinearSearchTest, FindInt10) {
+		// This test is named "Positive", and belongs to the "HelloWorld"
+		// test case.
 
-      int array[] = {5, 3, 12, 9, 10, 1};
-      ASSERT_EQ(4, find(10, array, 6));
-      _testScore += 6;
-    }
+		int array[] = { 5, 3, 12, 9, 10, 1 };
+		ASSERT_EQ(4, find(10, array, 6));
+		_testScore += 6;
+	}
 
-    TEST_F(LinearSearchTest, DontFindInt11) {
-        // This test is named "Positive", and belongs to the "HelloWorld"
-        // test case.
+	TEST_F(LinearSearchTest, DontFindInt11) {
+		// This test is named "Positive", and belongs to the "HelloWorld"
+		// test case.
 
-        int array[] = {5, 3, 12, 9, 10, 1};
-        ASSERT_EQ(-1, find(11, array, 6));
-        _testScore += 7;
-    }
+		int array[] = { 5, 3, 12, 9, 10, 1 };
+		ASSERT_EQ(-1, find(11, array, 6));
+		_testScore += 7;
+	}
 
-    TEST_F(LinearSearchTest, PassNullString) {
-        // This test is named "Positive", and belongs to the "HelloWorld"
-        // test case.
+	TEST_F(LinearSearchTest, PassNullString) {
+		// This test is named "Positive", and belongs to the "HelloWorld"
+		// test case.
 
-        ASSERT_NO_DEATH(find<std::string>("b", NULL, 6), "");
-        ASSERT_EQ(-1, find<std::string>("b", NULL, 6));
-        _testScore += 7;
+		ASSERT_NO_DEATH(find<std::string>("b", NULL, 6), "");
+		ASSERT_EQ(-1, find<std::string>("b", NULL, 6));
+		_testScore += 7;
 
-    }
+	}
 
 }  // namespace
 

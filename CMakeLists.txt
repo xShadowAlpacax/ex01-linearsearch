@@ -5,6 +5,7 @@ project (EX01-LinearSearch)
 
 set(SOURCE_PREFIX "linearsearch")
 set(EXEC_NAME "LinearSearch")
+set(CMAKE_CXX_STANDARD 11)
 
 if(EXISTS ${CMAKE_HOME_DIRECTORY}/csv15-lib/CMakeLists.txt)
     include(csv15-lib/CMakeLists.txt)
