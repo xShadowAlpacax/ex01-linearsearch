@@ -20,6 +20,8 @@ otherwise it returns -1.
 The functions declaration should look like the following: 
 
 ```cpp
+#include <cstdint>
+
 namespace edu { namespace vcccd { namespace vc { namespace csv15 {
 
 template <class T>
