@@ -12,6 +12,7 @@ namespace edu
 				template <class Alpaca>
 				int64_t find(const Alpaca& value, Alpaca array[], size_t size)
 				{
+					if (array == NULL) return -1;
 					for (int i = 0; i < size; i++)
 					{
 						if (value == array[i]) return i;
